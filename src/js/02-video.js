@@ -1,1 +1,1 @@
-npm install @vimeo/player
+

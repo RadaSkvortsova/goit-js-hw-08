@@ -14,15 +14,14 @@ function createGallery(items) {
     .map(
       ({ preview, original, description }) =>
         `<li><a class="gallery__item" href=${original}>
-  <img class="gallery__image" src=${preview} data-source="${original}" alt="${description}" />
+  <img class="gallery__image" src=${preview} alt="${description}" />
 </a></li>`,
     )
     .join('');
 }
 
-let gallery = new SimpleLightbox('.gallery a');
-gallery.on('show.simplelightbox', function () {
-  captionsData: 'alt';
-  captionDelay: 250;
-  captionPosition: 'bottom';
+const gallery = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
+  captionDelay: 250,
+  captionPosition: 'bottom',
 });

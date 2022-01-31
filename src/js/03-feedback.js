@@ -37,7 +37,7 @@ function inputText(event) {
   localStorage.setItem(INPUT_KEY, JSON.stringify(objectInput));
 }
 
-function inForm() {
+function updateForm() {
   let saveText = localStorage.getItem(INPUT_KEY);
   if (saveText) {
     saveText = JSON.parse(saveText);

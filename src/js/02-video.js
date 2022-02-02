@@ -1,5 +1,5 @@
 import throttle from 'lodash/throttle';
-
+import Player from '@vimeo/player';
 const iframe = document.querySelector('iframe');
 const player = new Vimeo.Player(iframe);
 const PLAYER_KEY = 'videoplayer - current - time';
@@ -20,4 +20,4 @@ function getTime() {
       return error.name;
     });
 }
-player.on('play', throttle(getTime, 1000));
+getTime();
